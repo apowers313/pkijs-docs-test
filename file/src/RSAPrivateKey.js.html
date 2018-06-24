@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">src/RSAPrivateKey.js | pkijs</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Public Key Infrastructure (PKI) is the basis of how identity and key management is performed on the web today. PKIjs is a pure JavaScript library implementing the formats that are used in PKI applications. It is built on WebCrypto and aspires to make it possible to build native web applications that utilize X.509 and the related formats on the web without plug-ins"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="pkijs"><meta property="twitter:description" content="Public Key Infrastructure (PKI) is the basis of how identity and key management is performed on the web today. PKIjs is a pure JavaScript library implementing the formats that are used in PKI applications. It is built on WebCrypto and aspires to make it possible to build native web applications that utilize X.509 and the related formats on the web without plug-ins"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AccessDescription.js~AccessDescription.html">AccessDescription</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Accuracy.js~Accuracy.html">Accuracy</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AlgorithmIdentifier.js~AlgorithmIdentifier.html">AlgorithmIdentifier</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AltName.js~AltName.html">AltName</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Attribute.js~Attribute.html">Attribute</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AttributeCertificateV1.js~AttCertValidityPeriod.html">AttCertValidityPeriod</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AttributeCertificateV1.js~AttributeCertificateInfoV1.html">AttributeCertificateInfoV1</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AttributeCertificateV1.js~AttributeCertificateV1.html">AttributeCertificateV1</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AttributeCertificateV1.js~IssuerSerial.html">IssuerSerial</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AttributeCertificateV2.js~AttributeCertificateInfoV2.html">AttributeCertificateInfoV2</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AttributeCertificateV2.js~AttributeCertificateV2.html">AttributeCertificateV2</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AttributeCertificateV2.js~Holder.html">Holder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AttributeCertificateV2.js~ObjectDigestInfo.html">ObjectDigestInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AttributeCertificateV2.js~V2Form.html">V2Form</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AttributeTypeAndValue.js~AttributeTypeAndValue.html">AttributeTypeAndValue</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AuthenticatedSafe.js~AuthenticatedSafe.html">AuthenticatedSafe</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AuthorityKeyIdentifier.js~AuthorityKeyIdentifier.html">AuthorityKeyIdentifier</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/BasicConstraints.js~BasicConstraints.html">BasicConstraints</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/BasicOCSPResponse.js~BasicOCSPResponse.html">BasicOCSPResponse</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CRLBag.js~CRLBag.html">CRLBag</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CRLDistributionPoints.js~CRLDistributionPoints.html">CRLDistributionPoints</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CertBag.js~CertBag.html">CertBag</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CertID.js~CertID.html">CertID</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Certificate.js~Certificate.html">Certificate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CertificateChainValidationEngine.js~CertificateChainValidationEngine.html">CertificateChainValidationEngine</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CertificatePolicies.js~CertificatePolicies.html">CertificatePolicies</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CertificateRevocationList.js~CertificateRevocationList.html">CertificateRevocationList</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CertificateSet.js~CertificateSet.html">CertificateSet</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CertificationRequest.js~CertificationRequest.html">CertificationRequest</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ContentInfo.js~ContentInfo.html">ContentInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CryptoEngine.js~CryptoEngine.html">CryptoEngine</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DigestInfo.js~DigestInfo.html">DigestInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DistributionPoint.js~DistributionPoint.html">DistributionPoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ECCCMSSharedInfo.js~ECCCMSSharedInfo.html">ECCCMSSharedInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ECPrivateKey.js~ECPrivateKey.html">ECPrivateKey</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ECPublicKey.js~ECPublicKey.html">ECPublicKey</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EncapsulatedContentInfo.js~EncapsulatedContentInfo.html">EncapsulatedContentInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EncryptedContentInfo.js~EncryptedContentInfo.html">EncryptedContentInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EncryptedData.js~EncryptedData.html">EncryptedData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EnvelopedData.js~EnvelopedData.html">EnvelopedData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ExtKeyUsage.js~ExtKeyUsage.html">ExtKeyUsage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Extension.js~Extension.html">Extension</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Extensions.js~Extensions.html">Extensions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/GeneralName.js~GeneralName.html">GeneralName</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/GeneralNames.js~GeneralNames.html">GeneralNames</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/GeneralSubtree.js~GeneralSubtree.html">GeneralSubtree</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/InfoAccess.js~InfoAccess.html">InfoAccess</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/IssuerAndSerialNumber.js~IssuerAndSerialNumber.html">IssuerAndSerialNumber</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/IssuingDistributionPoint.js~IssuingDistributionPoint.html">IssuingDistributionPoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/KEKIdentifier.js~KEKIdentifier.html">KEKIdentifier</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/KEKRecipientInfo.js~KEKRecipientInfo.html">KEKRecipientInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/KeyAgreeRecipientIdentifier.js~KeyAgreeRecipientIdentifier.html">KeyAgreeRecipientIdentifier</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/KeyAgreeRecipientInfo.js~KeyAgreeRecipientInfo.html">KeyAgreeRecipientInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/KeyBag.js~KeyBag.html">KeyBag</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/KeyTransRecipientInfo.js~KeyTransRecipientInfo.html">KeyTransRecipientInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/MacData.js~MacData.html">MacData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/MessageImprint.js~MessageImprint.html">MessageImprint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/NameConstraints.js~NameConstraints.html">NameConstraints</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/OCSPRequest.js~OCSPRequest.html">OCSPRequest</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/OCSPResponse.js~OCSPResponse.html">OCSPResponse</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/OriginatorIdentifierOrKey.js~OriginatorIdentifierOrKey.html">OriginatorIdentifierOrKey</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/OriginatorInfo.js~OriginatorInfo.html">OriginatorInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/OriginatorPublicKey.js~OriginatorPublicKey.html">OriginatorPublicKey</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/OtherCertificateFormat.js~OtherCertificateFormat.html">OtherCertificateFormat</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/OtherKeyAttribute.js~OtherKeyAttribute.html">OtherKeyAttribute</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/OtherPrimeInfo.js~OtherPrimeInfo.html">OtherPrimeInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/OtherRecipientInfo.js~OtherRecipientInfo.html">OtherRecipientInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/OtherRevocationInfoFormat.js~OtherRevocationInfoFormat.html">OtherRevocationInfoFormat</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PBES2Params.js~PBES2Params.html">PBES2Params</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PBKDF2Params.js~PBKDF2Params.html">PBKDF2Params</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PFX.js~PFX.html">PFX</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PKCS8ShroudedKeyBag.js~PKCS8ShroudedKeyBag.html">PKCS8ShroudedKeyBag</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PKIStatusInfo.js~PKIStatusInfo.html">PKIStatusInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PasswordRecipientinfo.js~PasswordRecipientinfo.html">PasswordRecipientinfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PolicyConstraints.js~PolicyConstraints.html">PolicyConstraints</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PolicyInformation.js~PolicyInformation.html">PolicyInformation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PolicyMapping.js~PolicyMapping.html">PolicyMapping</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PolicyMappings.js~PolicyMappings.html">PolicyMappings</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PolicyQualifierInfo.js~PolicyQualifierInfo.html">PolicyQualifierInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PrivateKeyInfo.js~PrivateKeyInfo.html">PrivateKeyInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PrivateKeyUsagePeriod.js~PrivateKeyUsagePeriod.html">PrivateKeyUsagePeriod</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PublicKeyInfo.js~PublicKeyInfo.html">PublicKeyInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RSAESOAEPParams.js~RSAESOAEPParams.html">RSAESOAEPParams</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RSAPrivateKey.js~RSAPrivateKey.html">RSAPrivateKey</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RSAPublicKey.js~RSAPublicKey.html">RSAPublicKey</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RSASSAPSSParams.js~RSASSAPSSParams.html">RSASSAPSSParams</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RecipientEncryptedKey.js~RecipientEncryptedKey.html">RecipientEncryptedKey</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RecipientEncryptedKeys.js~RecipientEncryptedKeys.html">RecipientEncryptedKeys</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RecipientIdentifier.js~RecipientIdentifier.html">RecipientIdentifier</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RecipientInfo.js~RecipientInfo.html">RecipientInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RecipientKeyIdentifier.js~RecipientKeyIdentifier.html">RecipientKeyIdentifier</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RelativeDistinguishedNames.js~RelativeDistinguishedNames.html">RelativeDistinguishedNames</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Request.js~Request.html">Request</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ResponseBytes.js~ResponseBytes.html">ResponseBytes</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ResponseData.js~ResponseData.html">ResponseData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RevocationInfoChoices.js~RevocationInfoChoices.html">RevocationInfoChoices</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RevokedCertificate.js~RevokedCertificate.html">RevokedCertificate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SafeBag.js~SafeBag.html">SafeBag</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SafeContents.js~SafeContents.html">SafeContents</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SecretBag.js~SecretBag.html">SecretBag</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Signature.js~Signature.html">Signature</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SignedAndUnsignedAttributes.js~SignedAndUnsignedAttributes.html">SignedAndUnsignedAttributes</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SignedCertificateTimestampList.js~SignedCertificateTimestamp.html">SignedCertificateTimestamp</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SignedCertificateTimestampList.js~SignedCertificateTimestampList.html">SignedCertificateTimestampList</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SignedData.js~SignedData.html">SignedData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SignerInfo.js~SignerInfo.html">SignerInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SingleResponse.js~SingleResponse.html">SingleResponse</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SubjectDirectoryAttributes.js~SubjectDirectoryAttributes.html">SubjectDirectoryAttributes</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/TBSRequest.js~TBSRequest.html">TBSRequest</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/TSTInfo.js~TSTInfo.html">TSTInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Time.js~Time.html">Time</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/TimeStampReq.js~TimeStampReq.html">TimeStampReq</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/TimeStampResp.js~TimeStampResp.html">TimeStampResp</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-verifySCTsForCertificate">verifySCTsForCertificate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-createCMSECDSASignature">createCMSECDSASignature</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-createECDSASignatureFromCMS">createECDSASignatureFromCMS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getAlgorithmByOID">getAlgorithmByOID</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getAlgorithmParameters">getAlgorithmParameters</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getCrypto">getCrypto</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getEngine">getEngine</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getHashAlgorithm">getHashAlgorithm</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getOIDByAlgorithm">getOIDByAlgorithm</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getRandomValues">getRandomValues</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-kdf">kdf</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-kdfWithCounter">kdfWithCounter</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-setEngine">setEngine</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-stringPrep">stringPrep</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/RSAPrivateKey.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import * as asn1js from &quot;asn1js&quot;;
+import { getParametersValue, toBase64, arrayBufferToString, stringToArrayBuffer, fromBase64, clearProps } from &quot;pvutils&quot;;
+import OtherPrimeInfo from &quot;./OtherPrimeInfo.js&quot;;
+//**************************************************************************************
+/**
+ * Class from RFC3447
+ */
+export default class RSAPrivateKey
+{
+	//**********************************************************************************
+	/**
+	 * Constructor for RSAPrivateKey class
+	 * @param {Object} [parameters={}]
+	 * @property {Object} [schema] asn1js parsed value
+	 */
+	constructor(parameters = {})
+	{
+		//region Internal properties of the object
+		/**
+		 * @type {number}
+		 * @description version
+		 */
+		this.version = getParametersValue(parameters, &quot;version&quot;, RSAPrivateKey.defaultValues(&quot;version&quot;));
+		/**
+		 * @type {Integer}
+		 * @description modulus
+		 */
+		this.modulus = getParametersValue(parameters, &quot;modulus&quot;, RSAPrivateKey.defaultValues(&quot;modulus&quot;));
+		/**
+		 * @type {Integer}
+		 * @description publicExponent
+		 */
+		this.publicExponent = getParametersValue(parameters, &quot;publicExponent&quot;, RSAPrivateKey.defaultValues(&quot;publicExponent&quot;));
+		/**
+		 * @type {Integer}
+		 * @description privateExponent
+		 */
+		this.privateExponent = getParametersValue(parameters, &quot;privateExponent&quot;, RSAPrivateKey.defaultValues(&quot;privateExponent&quot;));
+		/**
+		 * @type {Integer}
+		 * @description prime1
+		 */
+		this.prime1 = getParametersValue(parameters, &quot;prime1&quot;, RSAPrivateKey.defaultValues(&quot;prime1&quot;));
+		/**
+		 * @type {Integer}
+		 * @description prime2
+		 */
+		this.prime2 = getParametersValue(parameters, &quot;prime2&quot;, RSAPrivateKey.defaultValues(&quot;prime2&quot;));
+		/**
+		 * @type {Integer}
+		 * @description exponent1
+		 */
+		this.exponent1 = getParametersValue(parameters, &quot;exponent1&quot;, RSAPrivateKey.defaultValues(&quot;exponent1&quot;));
+		/**
+		 * @type {Integer}
+		 * @description exponent2
+		 */
+		this.exponent2 = getParametersValue(parameters, &quot;exponent2&quot;, RSAPrivateKey.defaultValues(&quot;exponent2&quot;));
+		/**
+		 * @type {Integer}
+		 * @description coefficient
+		 */
+		this.coefficient = getParametersValue(parameters, &quot;coefficient&quot;, RSAPrivateKey.defaultValues(&quot;coefficient&quot;));
+
+		if(&quot;otherPrimeInfos&quot; in parameters)
+			/**
+			 * @type {Array.&lt;OtherPrimeInfo&gt;}
+			 * @description otherPrimeInfos
+			 */
+			this.otherPrimeInfos = getParametersValue(parameters, &quot;otherPrimeInfos&quot;, RSAPrivateKey.defaultValues(&quot;otherPrimeInfos&quot;));
+		//endregion
+
+		//region If input argument array contains &quot;schema&quot; for this object
+		if(&quot;schema&quot; in parameters)
+			this.fromSchema(parameters.schema);
+		//endregion
+		//region If input argument array contains &quot;json&quot; for this object
+		if(&quot;json&quot; in parameters)
+			this.fromJSON(parameters.json);
+		//endregion
+	}
+	//**********************************************************************************
+	/**
+	 * Return default values for all class members
+	 * @param {string} memberName String name for a class member
+	 */
+	static defaultValues(memberName)
+	{
+		switch(memberName)
+		{
+			case &quot;version&quot;:
+				return 0;
+			case &quot;modulus&quot;:
+				return new asn1js.Integer();
+			case &quot;publicExponent&quot;:
+				return new asn1js.Integer();
+			case &quot;privateExponent&quot;:
+				return new asn1js.Integer();
+			case &quot;prime1&quot;:
+				return new asn1js.Integer();
+			case &quot;prime2&quot;:
+				return new asn1js.Integer();
+			case &quot;exponent1&quot;:
+				return new asn1js.Integer();
+			case &quot;exponent2&quot;:
+				return new asn1js.Integer();
+			case &quot;coefficient&quot;:
+				return new asn1js.Integer();
+			case &quot;otherPrimeInfos&quot;:
+				return [];
+			default:
+				throw new Error(`Invalid member name for RSAPrivateKey class: ${memberName}`);
+		}
+	}
+	//**********************************************************************************
+	/**
+	 * Return value of asn1js schema for current class
+	 * @param {Object} parameters Input parameters for the schema
+	 * @returns {Object} asn1js schema object
+	 */
+	static schema(parameters = {})
+	{
+		//RSAPrivateKey ::= Sequence {
+		//    version           Version,
+		//    modulus           Integer,  -- n
+		//    publicExponent    Integer,  -- e
+		//    privateExponent   Integer,  -- d
+		//    prime1            Integer,  -- p
+		//    prime2            Integer,  -- q
+		//    exponent1         Integer,  -- d mod (p-1)
+		//    exponent2         Integer,  -- d mod (q-1)
+		//    coefficient       Integer,  -- (inverse of q) mod p
+		//    otherPrimeInfos   OtherPrimeInfos OPTIONAL
+		//}
+		//
+		//OtherPrimeInfos ::= Sequence SIZE(1..MAX) OF OtherPrimeInfo
+
+		/**
+		 * @type {Object}
+		 * @property {string} [blockName]
+		 * @property {string} [version]
+		 * @property {string} [modulus]
+		 * @property {string} [publicExponent]
+		 * @property {string} [privateExponent]
+		 * @property {string} [prime1]
+		 * @property {string} [prime2]
+		 * @property {string} [exponent1]
+		 * @property {string} [exponent2]
+		 * @property {string} [coefficient]
+		 * @property {string} [otherPrimeInfosName]
+		 * @property {Object} [otherPrimeInfo]
+		 */
+		const names = getParametersValue(parameters, &quot;names&quot;, {});
+
+		return (new asn1js.Sequence({
+			name: (names.blockName || &quot;&quot;),
+			value: [
+				new asn1js.Integer({ name: (names.version || &quot;&quot;) }),
+				new asn1js.Integer({ name: (names.modulus || &quot;&quot;) }),
+				new asn1js.Integer({ name: (names.publicExponent || &quot;&quot;) }),
+				new asn1js.Integer({ name: (names.privateExponent || &quot;&quot;) }),
+				new asn1js.Integer({ name: (names.prime1 || &quot;&quot;) }),
+				new asn1js.Integer({ name: (names.prime2 || &quot;&quot;) }),
+				new asn1js.Integer({ name: (names.exponent1 || &quot;&quot;) }),
+				new asn1js.Integer({ name: (names.exponent2 || &quot;&quot;) }),
+				new asn1js.Integer({ name: (names.coefficient || &quot;&quot;) }),
+				new asn1js.Sequence({
+					optional: true,
+					value: [
+						new asn1js.Repeated({
+							name: (names.otherPrimeInfosName || &quot;&quot;),
+							value: OtherPrimeInfo.schema(names.otherPrimeInfo || {})
+						})
+					]
+				})
+			]
+		}));
+	}
+	//**********************************************************************************
+	/**
+	 * Convert parsed asn1js object into current class
+	 * @param {!Object} schema
+	 */
+	fromSchema(schema)
+	{
+		//region Clear input data first
+		clearProps(schema, [
+			&quot;version&quot;,
+			&quot;modulus&quot;,
+			&quot;publicExponent&quot;,
+			&quot;privateExponent&quot;,
+			&quot;prime1&quot;,
+			&quot;prime2&quot;,
+			&quot;exponent1&quot;,
+			&quot;exponent2&quot;,
+			&quot;coefficient&quot;,
+			&quot;otherPrimeInfos&quot;
+		]);
+		//endregion
+		
+		//region Check the schema is valid
+		const asn1 = asn1js.compareSchema(schema,
+			schema,
+			RSAPrivateKey.schema({
+				names: {
+					version: &quot;version&quot;,
+					modulus: &quot;modulus&quot;,
+					publicExponent: &quot;publicExponent&quot;,
+					privateExponent: &quot;privateExponent&quot;,
+					prime1: &quot;prime1&quot;,
+					prime2: &quot;prime2&quot;,
+					exponent1: &quot;exponent1&quot;,
+					exponent2: &quot;exponent2&quot;,
+					coefficient: &quot;coefficient&quot;,
+					otherPrimeInfo: {
+						names: {
+							blockName: &quot;otherPrimeInfos&quot;
+						}
+					}
+				}
+			})
+		);
+
+		if(asn1.verified === false)
+			throw new Error(&quot;Object&apos;s schema was not verified against input data for RSAPrivateKey&quot;);
+		//endregion
+
+		//region Get internal properties from parsed schema
+		this.version = asn1.result.version.valueBlock.valueDec;
+		this.modulus = asn1.result.modulus.convertFromDER(256);
+		this.publicExponent = asn1.result.publicExponent;
+		this.privateExponent = asn1.result.privateExponent.convertFromDER(256);
+		this.prime1 = asn1.result.prime1.convertFromDER(128);
+		this.prime2 = asn1.result.prime2.convertFromDER(128);
+		this.exponent1 = asn1.result.exponent1.convertFromDER(128);
+		this.exponent2 = asn1.result.exponent2.convertFromDER(128);
+		this.coefficient = asn1.result.coefficient.convertFromDER(128);
+
+		if(&quot;otherPrimeInfos&quot; in asn1.result)
+			this.otherPrimeInfos = Array.from(asn1.result.otherPrimeInfos, element =&gt; new OtherPrimeInfo({ schema: element }));
+		//endregion
+	}
+	//**********************************************************************************
+	/**
+	 * Convert current object to asn1js object and set correct values
+	 * @returns {Object} asn1js object
+	 */
+	toSchema()
+	{
+		//region Create array for output sequence
+		const outputArray = [];
+		
+		outputArray.push(new asn1js.Integer({ value: this.version }));
+		outputArray.push(this.modulus.convertToDER());
+		outputArray.push(this.publicExponent);
+		outputArray.push(this.privateExponent.convertToDER());
+		outputArray.push(this.prime1.convertToDER());
+		outputArray.push(this.prime2.convertToDER());
+		outputArray.push(this.exponent1.convertToDER());
+		outputArray.push(this.exponent2.convertToDER());
+		outputArray.push(this.coefficient.convertToDER());
+		
+		if(&quot;otherPrimeInfos&quot; in this)
+		{
+			outputArray.push(new asn1js.Sequence({
+				value: Array.from(this.otherPrimeInfos, element =&gt; element.toSchema())
+			}));
+		}
+		//endregion
+		
+		//region Construct and return new ASN.1 schema for this object
+		return (new asn1js.Sequence({
+			value: outputArray
+		}));
+		//endregion
+	}
+	//**********************************************************************************
+	/**
+	 * Convertion for the class to JSON object
+	 * @returns {Object}
+	 */
+	toJSON()
+	{
+		const jwk = {
+			n: toBase64(arrayBufferToString(this.modulus.valueBlock.valueHex), true, true, true),
+			e: toBase64(arrayBufferToString(this.publicExponent.valueBlock.valueHex), true, true, true),
+			d: toBase64(arrayBufferToString(this.privateExponent.valueBlock.valueHex), true, true, true),
+			p: toBase64(arrayBufferToString(this.prime1.valueBlock.valueHex), true, true, true),
+			q: toBase64(arrayBufferToString(this.prime2.valueBlock.valueHex), true, true, true),
+			dp: toBase64(arrayBufferToString(this.exponent1.valueBlock.valueHex), true, true, true),
+			dq: toBase64(arrayBufferToString(this.exponent2.valueBlock.valueHex), true, true, true),
+			qi: toBase64(arrayBufferToString(this.coefficient.valueBlock.valueHex), true, true, true)
+		};
+
+		if(&quot;otherPrimeInfos&quot; in this)
+			jwk.oth = Array.from(this.otherPrimeInfos, element =&gt; element.toJSON());
+
+		return jwk;
+	}
+	//**********************************************************************************
+	/**
+	 * Convert JSON value into current object
+	 * @param {Object} json
+	 */
+	fromJSON(json)
+	{
+		if(&quot;n&quot; in json)
+			this.modulus = new asn1js.Integer({ valueHex: stringToArrayBuffer(fromBase64(json.n, true, true)) });
+		else
+			throw new Error(&quot;Absent mandatory parameter \&quot;n\&quot;&quot;);
+
+		if(&quot;e&quot; in json)
+			this.publicExponent = new asn1js.Integer({ valueHex: stringToArrayBuffer(fromBase64(json.e, true, true)) });
+		else
+			throw new Error(&quot;Absent mandatory parameter \&quot;e\&quot;&quot;);
+
+		if(&quot;d&quot; in json)
+			this.privateExponent = new asn1js.Integer({ valueHex: stringToArrayBuffer(fromBase64(json.d, true, true)) });
+		else
+			throw new Error(&quot;Absent mandatory parameter \&quot;d\&quot;&quot;);
+
+		if(&quot;p&quot; in json)
+			this.prime1 = new asn1js.Integer({ valueHex: stringToArrayBuffer(fromBase64(json.p, true, true)) });
+		else
+			throw new Error(&quot;Absent mandatory parameter \&quot;p\&quot;&quot;);
+
+		if(&quot;q&quot; in json)
+			this.prime2 = new asn1js.Integer({ valueHex: stringToArrayBuffer(fromBase64(json.q, true, true)) });
+		else
+			throw new Error(&quot;Absent mandatory parameter \&quot;q\&quot;&quot;);
+
+		if(&quot;dp&quot; in json)
+			this.exponent1 = new asn1js.Integer({ valueHex: stringToArrayBuffer(fromBase64(json.dp, true, true)) });
+		else
+			throw new Error(&quot;Absent mandatory parameter \&quot;dp\&quot;&quot;);
+
+		if(&quot;dq&quot; in json)
+			this.exponent2 = new asn1js.Integer({ valueHex: stringToArrayBuffer(fromBase64(json.dq, true, true)) });
+		else
+			throw new Error(&quot;Absent mandatory parameter \&quot;dq\&quot;&quot;);
+
+		if(&quot;qi&quot; in json)
+			this.coefficient = new asn1js.Integer({ valueHex: stringToArrayBuffer(fromBase64(json.qi, true, true)) });
+		else
+			throw new Error(&quot;Absent mandatory parameter \&quot;qi\&quot;&quot;);
+
+		if(&quot;oth&quot; in json)
+			this.otherPrimeInfos = Array.from(json.oth, element =&gt; new OtherPrimeInfo({ json: element }));
+	}
+	//**********************************************************************************
+}
+//**************************************************************************************
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

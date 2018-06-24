@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">src/common.js | pkijs</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Public Key Infrastructure (PKI) is the basis of how identity and key management is performed on the web today. PKIjs is a pure JavaScript library implementing the formats that are used in PKI applications. It is built on WebCrypto and aspires to make it possible to build native web applications that utilize X.509 and the related formats on the web without plug-ins"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="pkijs"><meta property="twitter:description" content="Public Key Infrastructure (PKI) is the basis of how identity and key management is performed on the web today. PKIjs is a pure JavaScript library implementing the formats that are used in PKI applications. It is built on WebCrypto and aspires to make it possible to build native web applications that utilize X.509 and the related formats on the web without plug-ins"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AccessDescription.js~AccessDescription.html">AccessDescription</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Accuracy.js~Accuracy.html">Accuracy</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AlgorithmIdentifier.js~AlgorithmIdentifier.html">AlgorithmIdentifier</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AltName.js~AltName.html">AltName</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Attribute.js~Attribute.html">Attribute</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AttributeCertificateV1.js~AttCertValidityPeriod.html">AttCertValidityPeriod</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AttributeCertificateV1.js~AttributeCertificateInfoV1.html">AttributeCertificateInfoV1</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AttributeCertificateV1.js~AttributeCertificateV1.html">AttributeCertificateV1</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AttributeCertificateV1.js~IssuerSerial.html">IssuerSerial</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AttributeCertificateV2.js~AttributeCertificateInfoV2.html">AttributeCertificateInfoV2</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AttributeCertificateV2.js~AttributeCertificateV2.html">AttributeCertificateV2</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AttributeCertificateV2.js~Holder.html">Holder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AttributeCertificateV2.js~ObjectDigestInfo.html">ObjectDigestInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AttributeCertificateV2.js~V2Form.html">V2Form</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AttributeTypeAndValue.js~AttributeTypeAndValue.html">AttributeTypeAndValue</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AuthenticatedSafe.js~AuthenticatedSafe.html">AuthenticatedSafe</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AuthorityKeyIdentifier.js~AuthorityKeyIdentifier.html">AuthorityKeyIdentifier</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/BasicConstraints.js~BasicConstraints.html">BasicConstraints</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/BasicOCSPResponse.js~BasicOCSPResponse.html">BasicOCSPResponse</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CRLBag.js~CRLBag.html">CRLBag</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CRLDistributionPoints.js~CRLDistributionPoints.html">CRLDistributionPoints</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CertBag.js~CertBag.html">CertBag</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CertID.js~CertID.html">CertID</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Certificate.js~Certificate.html">Certificate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CertificateChainValidationEngine.js~CertificateChainValidationEngine.html">CertificateChainValidationEngine</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CertificatePolicies.js~CertificatePolicies.html">CertificatePolicies</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CertificateRevocationList.js~CertificateRevocationList.html">CertificateRevocationList</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CertificateSet.js~CertificateSet.html">CertificateSet</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CertificationRequest.js~CertificationRequest.html">CertificationRequest</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ContentInfo.js~ContentInfo.html">ContentInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CryptoEngine.js~CryptoEngine.html">CryptoEngine</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DigestInfo.js~DigestInfo.html">DigestInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DistributionPoint.js~DistributionPoint.html">DistributionPoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ECCCMSSharedInfo.js~ECCCMSSharedInfo.html">ECCCMSSharedInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ECPrivateKey.js~ECPrivateKey.html">ECPrivateKey</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ECPublicKey.js~ECPublicKey.html">ECPublicKey</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EncapsulatedContentInfo.js~EncapsulatedContentInfo.html">EncapsulatedContentInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EncryptedContentInfo.js~EncryptedContentInfo.html">EncryptedContentInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EncryptedData.js~EncryptedData.html">EncryptedData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EnvelopedData.js~EnvelopedData.html">EnvelopedData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ExtKeyUsage.js~ExtKeyUsage.html">ExtKeyUsage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Extension.js~Extension.html">Extension</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Extensions.js~Extensions.html">Extensions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/GeneralName.js~GeneralName.html">GeneralName</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/GeneralNames.js~GeneralNames.html">GeneralNames</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/GeneralSubtree.js~GeneralSubtree.html">GeneralSubtree</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/InfoAccess.js~InfoAccess.html">InfoAccess</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/IssuerAndSerialNumber.js~IssuerAndSerialNumber.html">IssuerAndSerialNumber</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/IssuingDistributionPoint.js~IssuingDistributionPoint.html">IssuingDistributionPoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/KEKIdentifier.js~KEKIdentifier.html">KEKIdentifier</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/KEKRecipientInfo.js~KEKRecipientInfo.html">KEKRecipientInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/KeyAgreeRecipientIdentifier.js~KeyAgreeRecipientIdentifier.html">KeyAgreeRecipientIdentifier</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/KeyAgreeRecipientInfo.js~KeyAgreeRecipientInfo.html">KeyAgreeRecipientInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/KeyBag.js~KeyBag.html">KeyBag</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/KeyTransRecipientInfo.js~KeyTransRecipientInfo.html">KeyTransRecipientInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/MacData.js~MacData.html">MacData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/MessageImprint.js~MessageImprint.html">MessageImprint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/NameConstraints.js~NameConstraints.html">NameConstraints</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/OCSPRequest.js~OCSPRequest.html">OCSPRequest</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/OCSPResponse.js~OCSPResponse.html">OCSPResponse</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/OriginatorIdentifierOrKey.js~OriginatorIdentifierOrKey.html">OriginatorIdentifierOrKey</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/OriginatorInfo.js~OriginatorInfo.html">OriginatorInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/OriginatorPublicKey.js~OriginatorPublicKey.html">OriginatorPublicKey</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/OtherCertificateFormat.js~OtherCertificateFormat.html">OtherCertificateFormat</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/OtherKeyAttribute.js~OtherKeyAttribute.html">OtherKeyAttribute</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/OtherPrimeInfo.js~OtherPrimeInfo.html">OtherPrimeInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/OtherRecipientInfo.js~OtherRecipientInfo.html">OtherRecipientInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/OtherRevocationInfoFormat.js~OtherRevocationInfoFormat.html">OtherRevocationInfoFormat</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PBES2Params.js~PBES2Params.html">PBES2Params</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PBKDF2Params.js~PBKDF2Params.html">PBKDF2Params</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PFX.js~PFX.html">PFX</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PKCS8ShroudedKeyBag.js~PKCS8ShroudedKeyBag.html">PKCS8ShroudedKeyBag</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PKIStatusInfo.js~PKIStatusInfo.html">PKIStatusInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PasswordRecipientinfo.js~PasswordRecipientinfo.html">PasswordRecipientinfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PolicyConstraints.js~PolicyConstraints.html">PolicyConstraints</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PolicyInformation.js~PolicyInformation.html">PolicyInformation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PolicyMapping.js~PolicyMapping.html">PolicyMapping</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PolicyMappings.js~PolicyMappings.html">PolicyMappings</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PolicyQualifierInfo.js~PolicyQualifierInfo.html">PolicyQualifierInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PrivateKeyInfo.js~PrivateKeyInfo.html">PrivateKeyInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PrivateKeyUsagePeriod.js~PrivateKeyUsagePeriod.html">PrivateKeyUsagePeriod</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PublicKeyInfo.js~PublicKeyInfo.html">PublicKeyInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RSAESOAEPParams.js~RSAESOAEPParams.html">RSAESOAEPParams</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RSAPrivateKey.js~RSAPrivateKey.html">RSAPrivateKey</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RSAPublicKey.js~RSAPublicKey.html">RSAPublicKey</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RSASSAPSSParams.js~RSASSAPSSParams.html">RSASSAPSSParams</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RecipientEncryptedKey.js~RecipientEncryptedKey.html">RecipientEncryptedKey</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RecipientEncryptedKeys.js~RecipientEncryptedKeys.html">RecipientEncryptedKeys</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RecipientIdentifier.js~RecipientIdentifier.html">RecipientIdentifier</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RecipientInfo.js~RecipientInfo.html">RecipientInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RecipientKeyIdentifier.js~RecipientKeyIdentifier.html">RecipientKeyIdentifier</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RelativeDistinguishedNames.js~RelativeDistinguishedNames.html">RelativeDistinguishedNames</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Request.js~Request.html">Request</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ResponseBytes.js~ResponseBytes.html">ResponseBytes</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ResponseData.js~ResponseData.html">ResponseData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RevocationInfoChoices.js~RevocationInfoChoices.html">RevocationInfoChoices</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RevokedCertificate.js~RevokedCertificate.html">RevokedCertificate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SafeBag.js~SafeBag.html">SafeBag</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SafeContents.js~SafeContents.html">SafeContents</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SecretBag.js~SecretBag.html">SecretBag</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Signature.js~Signature.html">Signature</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SignedAndUnsignedAttributes.js~SignedAndUnsignedAttributes.html">SignedAndUnsignedAttributes</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SignedCertificateTimestampList.js~SignedCertificateTimestamp.html">SignedCertificateTimestamp</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SignedCertificateTimestampList.js~SignedCertificateTimestampList.html">SignedCertificateTimestampList</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SignedData.js~SignedData.html">SignedData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SignerInfo.js~SignerInfo.html">SignerInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SingleResponse.js~SingleResponse.html">SingleResponse</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SubjectDirectoryAttributes.js~SubjectDirectoryAttributes.html">SubjectDirectoryAttributes</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/TBSRequest.js~TBSRequest.html">TBSRequest</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/TSTInfo.js~TSTInfo.html">TSTInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Time.js~Time.html">Time</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/TimeStampReq.js~TimeStampReq.html">TimeStampReq</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/TimeStampResp.js~TimeStampResp.html">TimeStampResp</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-verifySCTsForCertificate">verifySCTsForCertificate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-createCMSECDSASignature">createCMSECDSASignature</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-createECDSASignatureFromCMS">createECDSASignatureFromCMS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getAlgorithmByOID">getAlgorithmByOID</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getAlgorithmParameters">getAlgorithmParameters</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getCrypto">getCrypto</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getEngine">getEngine</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getHashAlgorithm">getHashAlgorithm</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getOIDByAlgorithm">getOIDByAlgorithm</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getRandomValues">getRandomValues</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-kdf">kdf</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-kdfWithCounter">kdfWithCounter</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-setEngine">setEngine</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-stringPrep">stringPrep</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/common.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import * as asn1js from &quot;asn1js&quot;;
+import { utilConcatBuf } from &quot;pvutils&quot;;
+import CryptoEngine from &quot;./CryptoEngine.js&quot;;
+//**************************************************************************************
+//region Crypto engine related function
+//**************************************************************************************
+let engine = {
+	name: &quot;none&quot;,
+	crypto: null,
+	subtle: null
+};
+//**************************************************************************************
+export function setEngine(name, crypto, subtle)
+{
+	//region We are in Node
+	// noinspection JSUnresolvedVariable
+	if((typeof process !== &quot;undefined&quot;) &amp;&amp; (&quot;pid&quot; in process) &amp;&amp; (typeof global !== &quot;undefined&quot;))
+	{
+		// noinspection ES6ModulesDependencies, JSUnresolvedVariable
+		if(typeof global[process.pid] === &quot;undefined&quot;)
+		{
+			// noinspection JSUnresolvedVariable
+			global[process.pid] = {};
+		}
+		else
+		{
+			// noinspection JSUnresolvedVariable
+			if(typeof global[process.pid] !== &quot;object&quot;)
+			{
+				// noinspection JSUnresolvedVariable
+				throw new Error(`Name global.${process.pid} already exists and it is not an object`);
+			}
+		}
+		
+		// noinspection JSUnresolvedVariable
+		if(typeof global[process.pid].pkijs === &quot;undefined&quot;)
+		{
+			// noinspection JSUnresolvedVariable
+			global[process.pid].pkijs = {};
+		}
+		else
+		{
+			// noinspection JSUnresolvedVariable
+			if(typeof global[process.pid].pkijs !== &quot;object&quot;)
+			{
+				// noinspection JSUnresolvedVariable
+				throw new Error(`Name global.${process.pid}.pkijs already exists and it is not an object`);
+			}
+		}
+		
+		// noinspection JSUnresolvedVariable
+		global[process.pid].pkijs.engine = {
+			name: name,
+			crypto: crypto,
+			subtle: subtle
+		};
+	}
+	//endregion
+	//region We are in browser
+	else
+	{
+		engine = {
+			name: name,
+			crypto: crypto,
+			subtle: subtle
+		};
+	}
+	//endregion
+}
+//**************************************************************************************
+export function getEngine()
+{
+	//region We are in Node
+	// noinspection JSUnresolvedVariable
+	if((typeof process !== &quot;undefined&quot;) &amp;&amp; (&quot;pid&quot; in process) &amp;&amp; (typeof global !== &quot;undefined&quot;))
+	{
+		let _engine;
+		
+		try
+		{
+			// noinspection JSUnresolvedVariable
+			_engine = global[process.pid].pkijs.engine;
+		}
+		catch(ex)
+		{
+			throw new Error(&quot;Please call \&quot;setEngine\&quot; before call to \&quot;getEngine\&quot;&quot;);
+		}
+		
+		return _engine;
+	}
+	//endregion
+	
+	return engine;
+}
+//**************************************************************************************
+(function initCryptoEngine()
+{
+	if(typeof self !== &quot;undefined&quot;)
+	{
+		if(&quot;crypto&quot; in self)
+		{
+			let engineName = &quot;webcrypto&quot;;
+			
+			/**
+			 * Standard crypto object
+			 * @type {Object}
+			 * @property {Object} [webkitSubtle] Subtle object from Apple
+			 */
+			const cryptoObject = self.crypto;
+			let subtleObject = null;
+			
+			// Apple Safari support
+			if(&quot;webkitSubtle&quot; in self.crypto)
+			{
+				try
+				{
+					subtleObject = self.crypto.webkitSubtle;
+				}
+				catch(ex)
+				{
+					subtleObject = self.crypto.subtle;
+				}
+				
+				engineName = &quot;safari&quot;;
+			}
+			
+			if(&quot;subtle&quot; in self.crypto)
+				subtleObject = self.crypto.subtle;
+			
+			engine = {
+				name: engineName,
+				crypto: cryptoObject,
+				subtle: new CryptoEngine({ name: engineName, crypto: self.crypto, subtle: subtleObject })
+			};
+		}
+	}
+	
+	setEngine(engine.name, engine.crypto, engine.subtle);
+})();
+//**************************************************************************************
+//endregion
+//**************************************************************************************
+//region Declaration of common functions
+//**************************************************************************************
+/**
+ * Get crypto subtle from current &quot;crypto engine&quot; or &quot;undefined&quot;
+ * @returns {({decrypt, deriveKey, digest, encrypt, exportKey, generateKey, importKey, sign, unwrapKey, verify, wrapKey}|null)}
+ */
+export function getCrypto()
+{
+	const _engine = getEngine();
+	
+	if(_engine.subtle !== null)
+		return _engine.subtle;
+	
+	return undefined;
+}
+//**************************************************************************************
+/**
+ * Initialize input Uint8Array by random values (with help from current &quot;crypto engine&quot;)
+ * @param {!Uint8Array} view
+ * @returns {*}
+ */
+export function getRandomValues(view)
+{
+	return getEngine().subtle.getRandomValues(view);
+}
+//**************************************************************************************
+/**
+ * Get OID for each specific algorithm
+ * @param {Object} algorithm
+ * @returns {string}
+ */
+export function getOIDByAlgorithm(algorithm)
+{
+	return getEngine().subtle.getOIDByAlgorithm(algorithm);
+}
+//**************************************************************************************
+/**
+ * Get default algorithm parameters for each kind of operation
+ * @param {string} algorithmName Algorithm name to get common parameters for
+ * @param {string} operation Kind of operation: &quot;sign&quot;, &quot;encrypt&quot;, &quot;generatekey&quot;, &quot;importkey&quot;, &quot;exportkey&quot;, &quot;verify&quot;
+ * @returns {*}
+ */
+export function getAlgorithmParameters(algorithmName, operation)
+{
+	return getEngine().subtle.getAlgorithmParameters(algorithmName, operation);
+}
+//**************************************************************************************
+/**
+ * Create CMS ECDSA signature from WebCrypto ECDSA signature
+ * @param {ArrayBuffer} signatureBuffer WebCrypto result of &quot;sign&quot; function
+ * @returns {ArrayBuffer}
+ */
+export function createCMSECDSASignature(signatureBuffer)
+{
+	//region Initial check for correct length
+	if((signatureBuffer.byteLength % 2) !== 0)
+		return new ArrayBuffer(0);
+	//endregion
+	
+	//region Initial variables
+	const length = signatureBuffer.byteLength / 2; // There are two equal parts inside incoming ArrayBuffer
+	
+	const rBuffer = new ArrayBuffer(length);
+	const rView = new Uint8Array(rBuffer);
+	rView.set(new Uint8Array(signatureBuffer, 0, length));
+	
+	const rInteger = new asn1js.Integer({ valueHex: rBuffer });
+	
+	const sBuffer = new ArrayBuffer(length);
+	const sView = new Uint8Array(sBuffer);
+	sView.set(new Uint8Array(signatureBuffer, length, length));
+	
+	const sInteger = new asn1js.Integer({ valueHex: sBuffer });
+	//endregion
+	
+	return (new asn1js.Sequence({
+		value: [
+			rInteger.convertToDER(),
+			sInteger.convertToDER()
+		]
+	})).toBER(false);
+}
+//**************************************************************************************
+/**
+ * String preparation function. In a future here will be realization of algorithm from RFC4518
+ * @param {string} inputString JavaScript string. As soon as for each ASN.1 string type we have a specific transformation function here we will work with pure JavaScript string
+ * @returns {string} Formated string
+ */
+export function stringPrep(inputString)
+{
+	//region Initial variables
+	let isSpace = false;
+	let cuttedResult = &quot;&quot;;
+	//endregion
+	
+	const result = inputString.trim(); // Trim input string
+	
+	//region Change all sequence of SPACE down to SPACE char
+	for(let i = 0; i &lt; result.length; i++)
+	{
+		if(result.charCodeAt(i) === 32)
+		{
+			if(isSpace === false)
+				isSpace = true;
+		}
+		else
+		{
+			if(isSpace)
+			{
+				cuttedResult += &quot; &quot;;
+				isSpace = false;
+			}
+			
+			cuttedResult += result[i];
+		}
+	}
+	//endregion
+	
+	return cuttedResult.toLowerCase();
+}
+//**************************************************************************************
+/**
+ * Create a single ArrayBuffer from CMS ECDSA signature
+ * @param {Sequence} cmsSignature ASN.1 SEQUENCE contains CMS ECDSA signature
+ * @returns {ArrayBuffer}
+ */
+export function createECDSASignatureFromCMS(cmsSignature)
+{
+	//region Check input variables
+	if((cmsSignature instanceof asn1js.Sequence) === false)
+		return new ArrayBuffer(0);
+	
+	if(cmsSignature.valueBlock.value.length !== 2)
+		return new ArrayBuffer(0);
+	
+	if((cmsSignature.valueBlock.value[0] instanceof asn1js.Integer) === false)
+		return new ArrayBuffer(0);
+	
+	if((cmsSignature.valueBlock.value[1] instanceof asn1js.Integer) === false)
+		return new ArrayBuffer(0);
+	//endregion
+	
+	const rValue = cmsSignature.valueBlock.value[0].convertFromDER();
+	const sValue = cmsSignature.valueBlock.value[1].convertFromDER();
+	
+	//region Check the lengths of two parts are equal
+	switch(true)
+	{
+		case (rValue.valueBlock.valueHex.byteLength &lt; sValue.valueBlock.valueHex.byteLength):
+			{
+				if((sValue.valueBlock.valueHex.byteLength - rValue.valueBlock.valueHex.byteLength) !== 1)
+					throw new Error(&quot;Incorrect DER integer decoding&quot;);
+				
+				const correctedLength = sValue.valueBlock.valueHex.byteLength;
+				
+				const rValueView = new Uint8Array(rValue.valueBlock.valueHex);
+				
+				const rValueBufferCorrected = new ArrayBuffer(correctedLength);
+				const rValueViewCorrected = new Uint8Array(rValueBufferCorrected);
+				
+				rValueViewCorrected.set(rValueView, 1);
+				rValueViewCorrected[0] = 0x00; // In order to be sure we do not have any garbage here
+				
+				return utilConcatBuf(rValueBufferCorrected, sValue.valueBlock.valueHex);
+			}
+		case (rValue.valueBlock.valueHex.byteLength &gt; sValue.valueBlock.valueHex.byteLength):
+			{
+				if((rValue.valueBlock.valueHex.byteLength - sValue.valueBlock.valueHex.byteLength) !== 1)
+					throw new Error(&quot;Incorrect DER integer decoding&quot;);
+				
+				const correctedLength = rValue.valueBlock.valueHex.byteLength;
+				
+				const sValueView = new Uint8Array(sValue.valueBlock.valueHex);
+				
+				const sValueBufferCorrected = new ArrayBuffer(correctedLength);
+				const sValueViewCorrected = new Uint8Array(sValueBufferCorrected);
+				
+				sValueViewCorrected.set(sValueView, 1);
+				sValueViewCorrected[0] = 0x00; // In order to be sure we do not have any garbage here
+				
+				return utilConcatBuf(rValue.valueBlock.valueHex, sValueBufferCorrected);
+			}
+		default:
+			{
+				//region In case we have equal length and the length is not even with 2
+				if(rValue.valueBlock.valueHex.byteLength % 2)
+				{
+					const correctedLength = (rValue.valueBlock.valueHex.byteLength + 1);
+					
+					const rValueView = new Uint8Array(rValue.valueBlock.valueHex);
+					
+					const rValueBufferCorrected = new ArrayBuffer(correctedLength);
+					const rValueViewCorrected = new Uint8Array(rValueBufferCorrected);
+					
+					rValueViewCorrected.set(rValueView, 1);
+					rValueViewCorrected[0] = 0x00; // In order to be sure we do not have any garbage here
+					
+					const sValueView = new Uint8Array(sValue.valueBlock.valueHex);
+					
+					const sValueBufferCorrected = new ArrayBuffer(correctedLength);
+					const sValueViewCorrected = new Uint8Array(sValueBufferCorrected);
+					
+					sValueViewCorrected.set(sValueView, 1);
+					sValueViewCorrected[0] = 0x00; // In order to be sure we do not have any garbage here
+					
+					return utilConcatBuf(rValueBufferCorrected, sValueBufferCorrected);
+				}
+				//endregion
+			}
+	}
+	//endregion
+	
+	return utilConcatBuf(rValue.valueBlock.valueHex, sValue.valueBlock.valueHex);
+}
+//**************************************************************************************
+/**
+ * Get WebCrypto algorithm by wel-known OID
+ * @param {string} oid well-known OID to search for
+ * @returns {Object}
+ */
+export function getAlgorithmByOID(oid)
+{
+	return getEngine().subtle.getAlgorithmByOID(oid);
+}
+//**************************************************************************************
+/**
+ * Getting hash algorithm by signature algorithm
+ * @param {AlgorithmIdentifier} signatureAlgorithm Signature algorithm
+ * @returns {string}
+ */
+export function getHashAlgorithm(signatureAlgorithm)
+{
+	return getEngine().subtle.getHashAlgorithm(signatureAlgorithm);
+}
+//**************************************************************************************
+/**
+ * ANS X9.63 Key Derivation Function having a &quot;Counter&quot; as a parameter
+ * @param {string} hashFunction Used hash function
+ * @param {ArrayBuffer} Zbuffer ArrayBuffer containing ECDH shared secret to derive from
+ * @param {number} Counter
+ * @param {ArrayBuffer} SharedInfo Usually DER encoded &quot;ECC_CMS_SharedInfo&quot; structure
+ */
+export function kdfWithCounter(hashFunction, Zbuffer, Counter, SharedInfo)
+{
+	//region Check of input parameters
+	switch(hashFunction.toUpperCase())
+	{
+		case &quot;SHA-1&quot;:
+		case &quot;SHA-256&quot;:
+		case &quot;SHA-384&quot;:
+		case &quot;SHA-512&quot;:
+			break;
+		default:
+			return Promise.reject(`Unknown hash function: ${hashFunction}`);
+	}
+	
+	if((Zbuffer instanceof ArrayBuffer) === false)
+		return Promise.reject(&quot;Please set \&quot;Zbuffer\&quot; as \&quot;ArrayBuffer\&quot;&quot;);
+	
+	if(Zbuffer.byteLength === 0)
+		return Promise.reject(&quot;\&quot;Zbuffer\&quot; has zero length, error&quot;);
+	
+	if((SharedInfo instanceof ArrayBuffer) === false)
+		return Promise.reject(&quot;Please set \&quot;SharedInfo\&quot; as \&quot;ArrayBuffer\&quot;&quot;);
+	
+	if(Counter &gt; 255)
+		return Promise.reject(&quot;Please set \&quot;Counter\&quot; variable to value less or equal to 255&quot;);
+	//endregion
+	
+	//region Initial variables
+	const counterBuffer = new ArrayBuffer(4);
+	const counterView = new Uint8Array(counterBuffer);
+	counterView[0] = 0x00;
+	counterView[1] = 0x00;
+	counterView[2] = 0x00;
+	counterView[3] = Counter;
+	
+	let combinedBuffer = new ArrayBuffer(0);
+	//endregion
+	
+	//region Get a &quot;crypto&quot; extension
+	const crypto = getCrypto();
+	if(typeof crypto === &quot;undefined&quot;)
+		return Promise.reject(&quot;Unable to create WebCrypto object&quot;);
+	//endregion
+	
+	//region Create a combined ArrayBuffer for digesting
+	combinedBuffer = utilConcatBuf(combinedBuffer, Zbuffer);
+	combinedBuffer = utilConcatBuf(combinedBuffer, counterBuffer);
+	combinedBuffer = utilConcatBuf(combinedBuffer, SharedInfo);
+	//endregion
+	
+	//region Return digest of combined ArrayBuffer and information about current counter
+	return crypto.digest({
+		name: hashFunction
+	},
+	combinedBuffer)
+		.then(result =&gt;
+			({
+				counter: Counter,
+				result
+			}));
+	//endregion
+}
+//**************************************************************************************
+/**
+ * ANS X9.63 Key Derivation Function
+ * @param {string} hashFunction Used hash function
+ * @param {ArrayBuffer} Zbuffer ArrayBuffer containing ECDH shared secret to derive from
+ * @param {number} keydatalen Length (!!! in BITS !!!) of used kew derivation function
+ * @param {ArrayBuffer} SharedInfo Usually DER encoded &quot;ECC_CMS_SharedInfo&quot; structure
+ */
+export function kdf(hashFunction, Zbuffer, keydatalen, SharedInfo)
+{
+	//region Initial variables
+	let hashLength = 0;
+	let maxCounter = 1;
+	
+	const kdfArray = [];
+	//endregion
+	
+	//region Check of input parameters
+	switch(hashFunction.toUpperCase())
+	{
+		case &quot;SHA-1&quot;:
+			hashLength = 160; // In bits
+			break;
+		case &quot;SHA-256&quot;:
+			hashLength = 256; // In bits
+			break;
+		case &quot;SHA-384&quot;:
+			hashLength = 384; // In bits
+			break;
+		case &quot;SHA-512&quot;:
+			hashLength = 512; // In bits
+			break;
+		default:
+			return Promise.reject(`Unknown hash function: ${hashFunction}`);
+	}
+	
+	if((Zbuffer instanceof ArrayBuffer) === false)
+		return Promise.reject(&quot;Please set \&quot;Zbuffer\&quot; as \&quot;ArrayBuffer\&quot;&quot;);
+	
+	if(Zbuffer.byteLength === 0)
+		return Promise.reject(&quot;\&quot;Zbuffer\&quot; has zero length, error&quot;);
+	
+	if((SharedInfo instanceof ArrayBuffer) === false)
+		return Promise.reject(&quot;Please set \&quot;SharedInfo\&quot; as \&quot;ArrayBuffer\&quot;&quot;);
+	//endregion
+	
+	//region Calculated maximum value of &quot;Counter&quot; variable
+	const quotient = keydatalen / hashLength;
+	
+	if(Math.floor(quotient) &gt; 0)
+	{
+		maxCounter = Math.floor(quotient);
+		
+		if((quotient - maxCounter) &gt; 0)
+			maxCounter++;
+	}
+	//endregion
+	
+	//region Create an array of &quot;kdfWithCounter&quot;
+	for(let i = 1; i &lt;= maxCounter; i++)
+		kdfArray.push(kdfWithCounter(hashFunction, Zbuffer, i, SharedInfo));
+	//endregion
+	
+	//region Return combined digest with specified length
+	return Promise.all(kdfArray).then(incomingResult =&gt;
+	{
+		//region Initial variables
+		let combinedBuffer = new ArrayBuffer(0);
+		let currentCounter = 1;
+		let found = true;
+		//endregion
+		
+		//region Combine all buffer together
+		while(found)
+		{
+			found = false;
+			
+			for(const result of incomingResult)
+			{
+				if(result.counter === currentCounter)
+				{
+					combinedBuffer = utilConcatBuf(combinedBuffer, result.result);
+					found = true;
+					break;
+				}
+			}
+			
+			currentCounter++;
+		}
+		//endregion
+		
+		//region Create output buffer with specified length
+		keydatalen &gt;&gt;= 3; // Divide by 8 since &quot;keydatalen&quot; is in bits
+		
+		if(combinedBuffer.byteLength &gt; keydatalen)
+		{
+			const newBuffer = new ArrayBuffer(keydatalen);
+			const newView = new Uint8Array(newBuffer);
+			const combinedView = new Uint8Array(combinedBuffer);
+			
+			for(let i = 0; i &lt; keydatalen; i++)
+				newView[i] = combinedView[i];
+			
+			return newBuffer;
+		}
+		
+		return combinedBuffer; // Since the situation when &quot;combinedBuffer.byteLength &lt; keydatalen&quot; here we have only &quot;combinedBuffer.byteLength === keydatalen&quot;
+		//endregion
+	});
+	//endregion
+}
+//**************************************************************************************
+//endregion
+//**************************************************************************************
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

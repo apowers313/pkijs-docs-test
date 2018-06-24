@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">src/IssuerAndSerialNumber.js | pkijs</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Public Key Infrastructure (PKI) is the basis of how identity and key management is performed on the web today. PKIjs is a pure JavaScript library implementing the formats that are used in PKI applications. It is built on WebCrypto and aspires to make it possible to build native web applications that utilize X.509 and the related formats on the web without plug-ins"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="pkijs"><meta property="twitter:description" content="Public Key Infrastructure (PKI) is the basis of how identity and key management is performed on the web today. PKIjs is a pure JavaScript library implementing the formats that are used in PKI applications. It is built on WebCrypto and aspires to make it possible to build native web applications that utilize X.509 and the related formats on the web without plug-ins"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AccessDescription.js~AccessDescription.html">AccessDescription</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Accuracy.js~Accuracy.html">Accuracy</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AlgorithmIdentifier.js~AlgorithmIdentifier.html">AlgorithmIdentifier</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AltName.js~AltName.html">AltName</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Attribute.js~Attribute.html">Attribute</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AttributeCertificateV1.js~AttCertValidityPeriod.html">AttCertValidityPeriod</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AttributeCertificateV1.js~AttributeCertificateInfoV1.html">AttributeCertificateInfoV1</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AttributeCertificateV1.js~AttributeCertificateV1.html">AttributeCertificateV1</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AttributeCertificateV1.js~IssuerSerial.html">IssuerSerial</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AttributeCertificateV2.js~AttributeCertificateInfoV2.html">AttributeCertificateInfoV2</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AttributeCertificateV2.js~AttributeCertificateV2.html">AttributeCertificateV2</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AttributeCertificateV2.js~Holder.html">Holder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AttributeCertificateV2.js~ObjectDigestInfo.html">ObjectDigestInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AttributeCertificateV2.js~V2Form.html">V2Form</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AttributeTypeAndValue.js~AttributeTypeAndValue.html">AttributeTypeAndValue</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AuthenticatedSafe.js~AuthenticatedSafe.html">AuthenticatedSafe</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/AuthorityKeyIdentifier.js~AuthorityKeyIdentifier.html">AuthorityKeyIdentifier</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/BasicConstraints.js~BasicConstraints.html">BasicConstraints</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/BasicOCSPResponse.js~BasicOCSPResponse.html">BasicOCSPResponse</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CRLBag.js~CRLBag.html">CRLBag</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CRLDistributionPoints.js~CRLDistributionPoints.html">CRLDistributionPoints</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CertBag.js~CertBag.html">CertBag</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CertID.js~CertID.html">CertID</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Certificate.js~Certificate.html">Certificate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CertificateChainValidationEngine.js~CertificateChainValidationEngine.html">CertificateChainValidationEngine</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CertificatePolicies.js~CertificatePolicies.html">CertificatePolicies</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CertificateRevocationList.js~CertificateRevocationList.html">CertificateRevocationList</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CertificateSet.js~CertificateSet.html">CertificateSet</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CertificationRequest.js~CertificationRequest.html">CertificationRequest</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ContentInfo.js~ContentInfo.html">ContentInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/CryptoEngine.js~CryptoEngine.html">CryptoEngine</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DigestInfo.js~DigestInfo.html">DigestInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/DistributionPoint.js~DistributionPoint.html">DistributionPoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ECCCMSSharedInfo.js~ECCCMSSharedInfo.html">ECCCMSSharedInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ECPrivateKey.js~ECPrivateKey.html">ECPrivateKey</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ECPublicKey.js~ECPublicKey.html">ECPublicKey</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EncapsulatedContentInfo.js~EncapsulatedContentInfo.html">EncapsulatedContentInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EncryptedContentInfo.js~EncryptedContentInfo.html">EncryptedContentInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EncryptedData.js~EncryptedData.html">EncryptedData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EnvelopedData.js~EnvelopedData.html">EnvelopedData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ExtKeyUsage.js~ExtKeyUsage.html">ExtKeyUsage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Extension.js~Extension.html">Extension</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Extensions.js~Extensions.html">Extensions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/GeneralName.js~GeneralName.html">GeneralName</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/GeneralNames.js~GeneralNames.html">GeneralNames</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/GeneralSubtree.js~GeneralSubtree.html">GeneralSubtree</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/InfoAccess.js~InfoAccess.html">InfoAccess</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/IssuerAndSerialNumber.js~IssuerAndSerialNumber.html">IssuerAndSerialNumber</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/IssuingDistributionPoint.js~IssuingDistributionPoint.html">IssuingDistributionPoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/KEKIdentifier.js~KEKIdentifier.html">KEKIdentifier</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/KEKRecipientInfo.js~KEKRecipientInfo.html">KEKRecipientInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/KeyAgreeRecipientIdentifier.js~KeyAgreeRecipientIdentifier.html">KeyAgreeRecipientIdentifier</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/KeyAgreeRecipientInfo.js~KeyAgreeRecipientInfo.html">KeyAgreeRecipientInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/KeyBag.js~KeyBag.html">KeyBag</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/KeyTransRecipientInfo.js~KeyTransRecipientInfo.html">KeyTransRecipientInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/MacData.js~MacData.html">MacData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/MessageImprint.js~MessageImprint.html">MessageImprint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/NameConstraints.js~NameConstraints.html">NameConstraints</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/OCSPRequest.js~OCSPRequest.html">OCSPRequest</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/OCSPResponse.js~OCSPResponse.html">OCSPResponse</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/OriginatorIdentifierOrKey.js~OriginatorIdentifierOrKey.html">OriginatorIdentifierOrKey</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/OriginatorInfo.js~OriginatorInfo.html">OriginatorInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/OriginatorPublicKey.js~OriginatorPublicKey.html">OriginatorPublicKey</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/OtherCertificateFormat.js~OtherCertificateFormat.html">OtherCertificateFormat</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/OtherKeyAttribute.js~OtherKeyAttribute.html">OtherKeyAttribute</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/OtherPrimeInfo.js~OtherPrimeInfo.html">OtherPrimeInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/OtherRecipientInfo.js~OtherRecipientInfo.html">OtherRecipientInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/OtherRevocationInfoFormat.js~OtherRevocationInfoFormat.html">OtherRevocationInfoFormat</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PBES2Params.js~PBES2Params.html">PBES2Params</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PBKDF2Params.js~PBKDF2Params.html">PBKDF2Params</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PFX.js~PFX.html">PFX</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PKCS8ShroudedKeyBag.js~PKCS8ShroudedKeyBag.html">PKCS8ShroudedKeyBag</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PKIStatusInfo.js~PKIStatusInfo.html">PKIStatusInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PasswordRecipientinfo.js~PasswordRecipientinfo.html">PasswordRecipientinfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PolicyConstraints.js~PolicyConstraints.html">PolicyConstraints</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PolicyInformation.js~PolicyInformation.html">PolicyInformation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PolicyMapping.js~PolicyMapping.html">PolicyMapping</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PolicyMappings.js~PolicyMappings.html">PolicyMappings</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PolicyQualifierInfo.js~PolicyQualifierInfo.html">PolicyQualifierInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PrivateKeyInfo.js~PrivateKeyInfo.html">PrivateKeyInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PrivateKeyUsagePeriod.js~PrivateKeyUsagePeriod.html">PrivateKeyUsagePeriod</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PublicKeyInfo.js~PublicKeyInfo.html">PublicKeyInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RSAESOAEPParams.js~RSAESOAEPParams.html">RSAESOAEPParams</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RSAPrivateKey.js~RSAPrivateKey.html">RSAPrivateKey</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RSAPublicKey.js~RSAPublicKey.html">RSAPublicKey</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RSASSAPSSParams.js~RSASSAPSSParams.html">RSASSAPSSParams</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RecipientEncryptedKey.js~RecipientEncryptedKey.html">RecipientEncryptedKey</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RecipientEncryptedKeys.js~RecipientEncryptedKeys.html">RecipientEncryptedKeys</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RecipientIdentifier.js~RecipientIdentifier.html">RecipientIdentifier</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RecipientInfo.js~RecipientInfo.html">RecipientInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RecipientKeyIdentifier.js~RecipientKeyIdentifier.html">RecipientKeyIdentifier</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RelativeDistinguishedNames.js~RelativeDistinguishedNames.html">RelativeDistinguishedNames</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Request.js~Request.html">Request</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ResponseBytes.js~ResponseBytes.html">ResponseBytes</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ResponseData.js~ResponseData.html">ResponseData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RevocationInfoChoices.js~RevocationInfoChoices.html">RevocationInfoChoices</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/RevokedCertificate.js~RevokedCertificate.html">RevokedCertificate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SafeBag.js~SafeBag.html">SafeBag</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SafeContents.js~SafeContents.html">SafeContents</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SecretBag.js~SecretBag.html">SecretBag</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Signature.js~Signature.html">Signature</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SignedAndUnsignedAttributes.js~SignedAndUnsignedAttributes.html">SignedAndUnsignedAttributes</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SignedCertificateTimestampList.js~SignedCertificateTimestamp.html">SignedCertificateTimestamp</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SignedCertificateTimestampList.js~SignedCertificateTimestampList.html">SignedCertificateTimestampList</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SignedData.js~SignedData.html">SignedData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SignerInfo.js~SignerInfo.html">SignerInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SingleResponse.js~SingleResponse.html">SingleResponse</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/SubjectDirectoryAttributes.js~SubjectDirectoryAttributes.html">SubjectDirectoryAttributes</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/TBSRequest.js~TBSRequest.html">TBSRequest</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/TSTInfo.js~TSTInfo.html">TSTInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Time.js~Time.html">Time</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/TimeStampReq.js~TimeStampReq.html">TimeStampReq</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/TimeStampResp.js~TimeStampResp.html">TimeStampResp</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-verifySCTsForCertificate">verifySCTsForCertificate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-createCMSECDSASignature">createCMSECDSASignature</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-createECDSASignatureFromCMS">createECDSASignatureFromCMS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getAlgorithmByOID">getAlgorithmByOID</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getAlgorithmParameters">getAlgorithmParameters</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getCrypto">getCrypto</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getEngine">getEngine</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getHashAlgorithm">getHashAlgorithm</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getOIDByAlgorithm">getOIDByAlgorithm</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getRandomValues">getRandomValues</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-kdf">kdf</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-kdfWithCounter">kdfWithCounter</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-setEngine">setEngine</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-stringPrep">stringPrep</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/IssuerAndSerialNumber.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import * as asn1js from &quot;asn1js&quot;;
+import { getParametersValue, clearProps } from &quot;pvutils&quot;;
+import RelativeDistinguishedNames from &quot;./RelativeDistinguishedNames.js&quot;;
+//**************************************************************************************
+/**
+ * Class from RFC5652
+ */
+export default class IssuerAndSerialNumber
+{
+	//**********************************************************************************
+	/**
+	 * Constructor for IssuerAndSerialNumber class
+	 * @param {Object} [parameters={}]
+	 * @property {Object} [schema] asn1js parsed value
+	 */
+	constructor(parameters = {})
+	{
+		//region Internal properties of the object
+		/**
+		 * @type {RelativeDistinguishedNames}
+		 * @description issuer
+		 */
+		this.issuer = getParametersValue(parameters, &quot;issuer&quot;, IssuerAndSerialNumber.defaultValues(&quot;issuer&quot;));
+		/**
+		 * @type {Integer}
+		 * @description serialNumber
+		 */
+		this.serialNumber = getParametersValue(parameters, &quot;serialNumber&quot;, IssuerAndSerialNumber.defaultValues(&quot;serialNumber&quot;));
+		//endregion
+
+		//region If input argument array contains &quot;schema&quot; for this object
+		if(&quot;schema&quot; in parameters)
+			this.fromSchema(parameters.schema);
+		//endregion
+	}
+	//**********************************************************************************
+	/**
+	 * Return default values for all class members
+	 * @param {string} memberName String name for a class member
+	 */
+	static defaultValues(memberName)
+	{
+		switch(memberName)
+		{
+			case &quot;issuer&quot;:
+				return new RelativeDistinguishedNames();
+			case &quot;serialNumber&quot;:
+				return new asn1js.Integer();
+			default:
+				throw new Error(`Invalid member name for IssuerAndSerialNumber class: ${memberName}`);
+		}
+	}
+	//**********************************************************************************
+	/**
+	 * Return value of asn1js schema for current class
+	 * @param {Object} parameters Input parameters for the schema
+	 * @returns {Object} asn1js schema object
+	 */
+	static schema(parameters = {})
+	{
+		//IssuerAndSerialNumber ::= SEQUENCE {
+		//    issuer Name,
+		//    serialNumber CertificateSerialNumber }
+		//
+		//CertificateSerialNumber ::= INTEGER
+
+		/**
+		 * @type {Object}
+		 * @property {string} [blockName]
+		 * @property {string} [issuer]
+		 * @property {string} [serialNumber]
+		 */
+		const names = getParametersValue(parameters, &quot;names&quot;, {});
+
+		return (new asn1js.Sequence({
+			name: (names.blockName || &quot;&quot;),
+			value: [
+				RelativeDistinguishedNames.schema(names.issuer || {}),
+				new asn1js.Integer({ name: (names.serialNumber || &quot;&quot;) })
+			]
+		}));
+	}
+	//**********************************************************************************
+	/**
+	 * Convert parsed asn1js object into current class
+	 * @param {!Object} schema
+	 */
+	fromSchema(schema)
+	{
+		//region Clear input data first
+		clearProps(schema, [
+			&quot;issuer&quot;,
+			&quot;serialNumber&quot;
+		]);
+		//endregion
+		
+		//region Check the schema is valid
+		const asn1 = asn1js.compareSchema(schema,
+			schema,
+			IssuerAndSerialNumber.schema({
+				names: {
+					issuer: {
+						names: {
+							blockName: &quot;issuer&quot;
+						}
+					},
+					serialNumber: &quot;serialNumber&quot;
+				}
+			})
+		);
+
+		if(asn1.verified === false)
+			throw new Error(&quot;Object&apos;s schema was not verified against input data for IssuerAndSerialNumber&quot;);
+		//endregion
+
+		//region Get internal properties from parsed schema
+		this.issuer = new RelativeDistinguishedNames({ schema: asn1.result.issuer });
+		this.serialNumber = asn1.result.serialNumber;
+		//endregion
+	}
+	//**********************************************************************************
+	/**
+	 * Convert current object to asn1js object and set correct values
+	 * @returns {Object} asn1js object
+	 */
+	toSchema()
+	{
+		//region Construct and return new ASN.1 schema for this object
+		return (new asn1js.Sequence({
+			value: [
+				this.issuer.toSchema(),
+				this.serialNumber
+			]
+		}));
+		//endregion
+	}
+	//**********************************************************************************
+	/**
+	 * Convertion for the class to JSON object
+	 * @returns {Object}
+	 */
+	toJSON()
+	{
+		return {
+			issuer: this.issuer.toJSON(),
+			serialNumber: this.serialNumber.toJSON()
+		};
+	}
+	//**********************************************************************************
+}
+//**************************************************************************************
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

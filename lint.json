@@ -1,0 +1,78 @@
+[
+  {
+    "name": "SignedData#verify",
+    "filePath": "src/SignedData.js",
+    "lines": [
+      {
+        "lineNumber": 372,
+        "line": "\t/**\r"
+      },
+      {
+        "lineNumber": 373,
+        "line": "\t * Verify current SignedData value\r"
+      },
+      {
+        "lineNumber": 374,
+        "line": "\t * @param signer\r"
+      },
+      {
+        "lineNumber": 375,
+        "line": "\t * @param data\r"
+      },
+      {
+        "lineNumber": 376,
+        "line": "\t * @param trustedCerts\r"
+      },
+      {
+        "lineNumber": 377,
+        "line": "\t * @param checkDate\r"
+      },
+      {
+        "lineNumber": 378,
+        "line": "\t * @param checkChain\r"
+      },
+      {
+        "lineNumber": 379,
+        "line": "\t * @param includeSignerCertificate\r"
+      },
+      {
+        "lineNumber": 380,
+        "line": "\t * @param extendedMode\r"
+      },
+      {
+        "lineNumber": 381,
+        "line": "\t * @param findOrigin\r"
+      },
+      {
+        "lineNumber": 382,
+        "line": "\t * @param findIssuer\r"
+      },
+      {
+        "lineNumber": 383,
+        "line": "\t * @returns {*}\r"
+      },
+      {
+        "lineNumber": 384,
+        "line": "\t */\r"
+      },
+      {
+        "lineNumber": 385,
+        "line": "\tverify({\r"
+      }
+    ],
+    "codeParams": [
+      "*"
+    ],
+    "docParams": [
+      "signer",
+      "data",
+      "trustedCerts",
+      "checkDate",
+      "checkChain",
+      "includeSignerCertificate",
+      "extendedMode",
+      "findOrigin",
+      "findIssuer"
+    ]
+  }
+]
